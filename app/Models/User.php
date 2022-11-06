@@ -17,11 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $appends = ['avatar'];
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
+    public function getAvatarAttribute() {
+        return "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $this->email ) ) );
+    }
 
     /**
      * The attributes that should be hidden for serialization.
