@@ -30,7 +30,7 @@ class StudentController extends Controller
             'phone' => 'required',
         ]);
             return Student::create([
-             'student_id' => request('student_id'),   
+             "student_id" => request("student_id"),   
             'name' => request('name'),
             'phone' => request('phone'),
     
