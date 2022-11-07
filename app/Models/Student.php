@@ -14,5 +14,5 @@ class Student extends Model
     ];
     protected $primaryKey = 'student_id';
     public $incrementing = false;
-    protected $keyType = 'int';
+    protected $keyType = 'string';
 }
