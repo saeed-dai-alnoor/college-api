@@ -24,11 +24,11 @@ class StudentController extends Controller
      */
     public function create()
     {
-        // request()->validate([
-        //     'student_id' => 'required',
-        //     'name' => 'required',
-        //     'phone' => 'required',
-        // ]);
+        request()->validate([
+            'student_id' => 'required',
+            'name' => 'required',
+            'phone' => 'required',
+        ]);
             return Student::create([
              'student_id' => request('student_id'),   
             'name' => request('name'),
